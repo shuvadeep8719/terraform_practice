@@ -1,0 +1,42 @@
+Here's the text extracted from your uploaded PDF:
+
+---
+
+**Terraform Whiteboard Content:**
+- **Code Snippets:**
+  - `resource "aws_security_group" "web_sg"` and `resource "aws_instance" "web"` demonstrate creating security groups and instances with count and dynamic blocks.
+  - Dynamic blocks use `for_each` to iterate over variables like ports.
+  - `variable "users"` shows IAM user creation using a map to associate roles.
+
+- **Terraform Folder Structure:**
+  - `terraform_project/`
+    - `main.tf`
+    - `variables.tf`
+    - `outputs.tf`
+    - `terraform.tfvars`
+    - `modules/`
+      - `ec2_s3_module/`
+        - `main.tf`
+        - `variables.tf`
+        - `outputs.tf`
+        - `security_group.tf`
+        - `iam.tf`
+
+- **Scenario:**
+  - As a DevOps Engineer, deploy infrastructure-as-code (IaC) with Terraform Workspaces, Modules, Variables, and Outputs for AWS resources (e.g., EC2, S3).
+
+- **Requirements:**
+  1. Use Terraform Workspaces for different environments (dev, staging, prod).
+  2. Create a reusable module for EC2 instances and S3 buckets.
+  3. EC2: Amazon Linux 2, SSH security group, IAM role with S3 access.
+  4. S3: Versioning enabled, environment-specific naming (e.g., my-app-dev).
+  5. Use input variables for customization (e.g., instance type, region).
+  6. Display outputs: EC2 public IP, S3 bucket name.
+
+- **Tasks:**
+  1. Create a module (`ec2_s3_module`) for EC2 and S3.
+  2. Deploy for multiple environments using Terraform Workspaces.
+  3. Use variables for input.
+  4. Use outputs to display EC2 public IP and S3 bucket name.
+
+---
